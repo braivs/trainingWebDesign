@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+	include includes/head
+	body
+		.wrapper
+			include includes/header
+			main.blog
+				.blog-container
+					.blog-header
+						.blog-cover
+					.blog-body
+						.blog-title
+							h1
+								a(href='#"') Lorem ipsum dolor sit amet.
+						.blog-text
+							p
+								| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, magni. Veritatis quas earum libero eaque sed nisi ducimus a praesentium, vero temporibus, natus ut optio, officiis fugiat qui? Adipisci exercitationem esse debitis quae dolor illum aliquid, tempora sed laborum voluptate.
+						.blog-tags
+							ul
+								li
+									a(href='#') Lorem
+								li
+									a(href='#') ipsum
+								li
+									a(href='#') dolor
+								li
+									a(href='#') consectetur
+					.blog-footer
+						ul
+							li.published-date 4 days ago
+			include includes/footer
+

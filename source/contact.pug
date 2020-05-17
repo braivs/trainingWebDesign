@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+	include includes/head
+	body
+		.wrapper
+			include includes/header
+			main.contact
+				form.form
+					p
+						input#name.feedback-input(type='text', name='name', placeholder='Name')
+					p
+						input#email.feedback-input(type='email', name='email', placeholder='Email')
+					p
+						textarea#comment.feedback-input(name='text', placeholder='Message')
+					input.button-submit(type='submit', name='', value='Submit')
+					.ease
+			include includes/footer
+

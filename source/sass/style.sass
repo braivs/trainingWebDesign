@@ -1,0 +1,522 @@
+//global settings
+body
+	font-family: 'Poppins', sans-serif
+*
+	padding: 0
+	margin: 0
+
+//Прижимание футера к низу
+html, body
+	height: 100%
+ul
+	display: flex
+li
+	list-style: none
+	display: flex
+a
+	text-decoration: none
+
+//owl carousel settings
+.owl-carousel
+	height: 65px
+	.owl-item img
+		width: auto
+		height: 65px
+.nav-btn
+	height: 65px
+	width: 46px
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+.prev-slide
+	background: url(../img/Left_arrow.jpg)
+	background-size: cover
+	left: 0
+.next-slide
+	background: url(../img/Right_arrow.jpg)
+	background-size: cover
+	right: 0
+.owl-prev.disabled, .owl-next.disabled
+	pointer-events: none
+	opacity: 0.2
+
+.wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100%
+	header
+		background: #f6f6f6
+		padding: 22px 0
+		.header-container
+			width: 90%
+			margin: 0 auto
+			display: flex
+			justify-content: space-between
+		.header-container a:hover
+			background: #ffea00
+	header,section.footer-menu
+		a
+			color: #000
+			font-size: 16px
+			margin-right: 64px
+			padding: 27px 10px
+		#menu-checkbox, #menu-checkbox-foot
+			display: none
+	main
+		section.top-slide
+			background: url(../img/slider_bg1.jpg) no-repeat
+			background-size: cover
+			padding-top: 123px
+			padding-bottom: 304px
+			width: 100%
+			.top-container
+				width: 85%
+				margin: 0 auto
+				div
+					h2
+						background: #ffea00
+						display: inline
+						font-size: 70px
+						padding: 0 13px
+					&:nth-child(2)
+						margin-bottom: 14px
+					p
+						background: #414146
+						display: inline
+						font-size: 24px
+						padding: 0 5px
+						color: white
+		section.specialize
+			.specialize-container
+				width: 80%
+				margin: 0 auto
+				text-align: center
+				h3
+					font-size: 35px
+				p
+					margin-top: 20px
+					margin-bottom: 20px
+					font-size: 28px
+				.specialize-cards
+					display: flex
+					justify-content: space-between
+					.card
+						width: 250px
+						display: flex
+						flex-direction: column
+						&:not(:first-of-type) .topcard
+							padding-bottom: 10px
+						.topcard
+							background: #ffea00
+							width: 250px
+							height: 208px
+							box-sizing: border-box
+							display: flex
+							align-items: flex-end
+							justify-content: center
+							position: relative
+							.triangle
+								width: 0
+								height: 0
+								border: 9px solid transparent
+								border-bottom: 9px solid #414146
+								position: absolute
+								z-index: 1
+								right: 23px
+								bottom: 0
+								display: none
+						.bottom-card
+							background: #414146
+							width: 250px
+							height: 85px
+							display: flex
+							align-items: center
+							justify-content: center
+							.first-p
+								color: white
+								font-size: 13px
+					.card:hover .first-p
+						font-size: 18px
+						text-align: left
+						transition: 0.2s
+					.card:hover .triangle
+						display: inherit
+		section.portfolio
+			width: 90%
+			margin: 90px auto 0
+			text-align: center
+			h4
+				background: #424147
+				padding: 0 8px
+				font-size: 18px
+				display: inline-block
+				color: #cbbb22
+				margin-bottom: 30px
+			p
+				color: #424146
+				font-size: 16px
+			.toggles
+				button
+					border: none
+					background: none
+					color: #424146
+					cursor: pointer
+					font-size: 16px
+					margin: 20px 5px
+					&:after
+						content: ' /'
+					&:last-child:after
+						content: ''
+			.posts
+				width: 90%
+				display: grid
+				margin: 0 auto
+				grid-template-columns: auto auto auto auto
+				.post
+					img
+						max-width: 100%
+						height: auto
+		section.brand-slider
+			width: 90%
+			margin: 0 auto
+			text-align: center
+			margin-bottom: 100px
+			h4
+				margin-top: 40px
+				background: #424147
+				padding: 0 8px
+				font-size: 18px
+				display: inline-block
+				color: #cbbb22
+				margin-bottom: 30px
+			p
+				color: #424146
+				font-size: 16px
+				margin-bottom: 30px
+	main.portfolioMy
+		margin-top: 50px
+		.gallery
+			width: 80%
+			margin: auto
+			display: flex
+			flex-wrap: wrap
+			margin-bottom: 50px
+			.photo-item
+				width: 25%
+				img
+					box-sizing: border-box
+					max-width: 100%
+					opacity: 0.7
+					&:hover
+						opacity: 1
+	main.blog
+		.blog-container
+			background: #fafafa
+			border-right: 5px
+			box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px
+			font-weight: 100
+			margin: 48px auto
+			width: 50rem
+			.blog-header
+				.blog-cover
+					background: url(../img/world.jpg)
+					background-size: cover
+					border-radius: 5px 5px 0 0
+					height: 15rem
+					box-shadow: inset rgba(0, 0, 0, 0.2) 0 64px 16px 16px
+			.blog-body
+				margin: 0 auto
+				width: 80%
+				.blog-title
+					h1
+						a
+							color: #333
+							font-weight: 100
+							&:hover
+								color: #ffea00
+				.blog-text
+					p
+						color: #4d4d4d
+				.blog-tags
+					ul
+						display: flex
+						flex-direction: row
+						flex-wrap: wrap
+						list-style: none
+						padding-left: 0
+					a
+						border: 1px solid #999999
+						border-radius: 3px
+						color: #999999
+						font-size: 0.75rem
+						height: 1.5rem
+						line-height: 1.5rem
+						padding: 0 0.5rem
+						text-align: center
+						text-transform: uppercase
+						white-space: nowrap
+						width: 5rem
+						&:hover
+								color: #ffea00
+								border-color: #ffea00
+				li + li
+					margin-left: 0.5rem
+		.blog-footer
+			border-top: 1px solid #e6e6e6
+			margin: 0 auto
+			padding-bottom: 0.125em
+			width: 80%
+			ul
+				list-style: none
+				display: flex
+				flex: row wrap
+				justify-content: flex-end
+				padding-left: 0px
+				li
+					color: #9999
+					font-size: 0.75rem
+					height: 1.5em
+					text-align: center
+					text-transform: uppercase
+					white-space: nowrap
+				.published-date
+					border: 1px solid #999999
+					border-radius: 3px
+					padding: 0 .5rem
+	main.about
+		.about__container
+			width: 80%
+			margin: 50px auto
+			text-align: center
+			img
+				max-width: 100%
+			p
+				margin-top: 50px
+			h1
+				margin-top: 40px
+	main.contact
+		.form
+			width: 50%
+			margin: 50px auto
+			.feedback-input
+				color: #000
+				font-weight: 300
+				font-size: 14px
+				line-height: 22px
+				background-color: #fff
+				padding: 13px
+				margin-bottom: 10px
+				width: 100%
+				box-sizing: border-box
+				border: 0px solid transparent
+				border-bottom: 1px solid #000
+			.button-submit
+				font: left
+				width: 100%
+				border: 0px	solid transparent
+				cursor: pointer
+				background-color: #000
+				color: white
+				font-size: 18px
+				padding-top: 22px
+				padding-bottom: 22px
+				transition: all 0.3s
+				margin-top: -4px
+				font-weight: 300
+				&:hover
+					background-color: #fff
+					color: #000
+					border: 1px solid #000
+			textarea
+				width: 100%
+				height: 150px
+				resize: vertical
+	footer
+		background: #414146
+		padding: 30px 0 0 0
+		color: white
+		display: flex
+		flex-direction: column
+		h4
+			font-size: 18px
+		.footer-container
+			width: 90%
+			height: 100%
+			margin: 0 auto
+			display: grid
+			grid-template-columns: 40% 30% 20%
+			grid-column-gap: 3%
+			.about-us
+				a
+					background: #000
+					color: #fff
+					font-size: 15px
+					padding: 15px
+					margin-top: 30px
+					margin-bottom: 40px
+					border-bottom: 2px solid #eeda00
+					display: inline-block
+				.images
+					margin-top: 10px
+			.tweets
+				p
+					font-size: 13px
+				span
+					color: #ffea00
+				.date
+					padding-top: 30px
+					font-size: 8px
+					color: #ffea00
+				.tweets-container
+					display: flex
+					margin-top: 28px
+					margin-bottom: 37px
+					.tweets-left
+						height: 22px
+						width: 26px
+						margin-right: 16px
+				.social-container
+					display: flex
+					.social-left
+						margin-right: 5px
+			.contacts-container
+				display: flex
+				flex-direction: row
+				margin-top: 35px
+				font-size: 13px
+				.contacts-left
+					margin-right: 15px
+				span
+					color: #ffea00
+			.phone-container
+				display: flex
+				p + p
+					padding-left: 5px
+					white-space: nowrap
+			.follow-container
+				padding-top: 35px
+				h1
+					font-size: 18px
+					padding-bottom: 24px
+				p
+					font-size: 13px
+					padding-bottom: 15px
+				form
+					white-space: nowrap
+					position: relative
+				input
+					background: none
+					border: none
+					border-bottom: 2px solid #ffea00
+					width: 232px
+					font-size: 18px
+					color: white
+					outline: none
+					padding: 0 0 2px 5px
+				button
+					border: none
+					width: 28px
+					height: 28px
+					padding: 0
+					margin: 0
+					cursor: pointer
+					position: absolute
+	section.footer-menu
+		.footer-menu-container
+			width: 100%
+			background: black
+			margin: 0 auto
+			padding-top: 23px
+			padding-bottom: 23px
+			display: flex
+			justify-content: center
+			a
+				color: white
+				font-size: 16px
+				margin-right: 75px
+				padding: 10px 5px
+				&:hover
+					background: #ffea00
+					color: black
+
+@media screen and (max-width: 720px)
+	#menu-checkbox:checked + nav[role="navigation"] .main-menu, #menu-checkbox-foot:checked + nav[role="navigation"] .main-menu-foot
+		display: block
+	#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after, #menu-checkbox-foot:checked + nav[role="navigation"] .toggle-button-foot:after
+		content: attr(data-close)
+	.owl-carousel
+		height: 45.5px
+		.owl-item img
+			height: 45.5px
+	.wrapper
+		header,section.footer-menu
+			.header-container,.footer-menu-container
+				nav
+					.toggle-button,.toggle-button-foot
+						text-align: center
+						display: block
+						cursor: pointer
+						text-align: center
+						color: white
+					.toggle-button:after,.toggle-button-foot:after
+						content: attr(data-open)
+						display: block
+					ul.main-menu,ul.main-menu-foot
+						display: none
+						li
+							width: 100%
+							display: block
+							font-size: 12px
+							a
+								display: block
+								padding: 8px
+		header
+			.header-container
+				width: 100%
+				display: flex
+				justify-content: space-around
+				nav
+					.toggle-button
+						color: #000
+					ul.main-menu
+						position: relative
+						top: 30px
+						right: 115px
+						li
+							a
+								margin-right: -65px
+		main
+			section.top-slide
+				padding-top: 40px
+				padding-bottom: 40px
+				.top-container
+					div
+						h2
+							font-size: 32px
+					div
+						p
+							font-size: 16px
+			section.specialize
+				.specialize-container
+					h3
+						font-size: 25px
+					p
+						font-size: 16px
+					.specialize-cards
+						display: flex
+						flex-direction: column
+						justify-content: space-between
+						.card
+							.bottom-card
+								width: 250px
+								margin: 0 auto
+			section.portfolio
+				.posts
+					width: 90%
+					display: grid
+					margin: 0 auto
+					grid-template-columns: auto
+		footer
+			.footer-container
+				grid-template-columns: none
+
